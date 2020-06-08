@@ -12,6 +12,6 @@ public class Main {
 
         biblioteca.addLivro(livro1);
         biblioteca.addLivro(livro2);
-        biblioteca.exibeLista();
+        biblioteca.imprimeListaDeLivros();
     }
 }

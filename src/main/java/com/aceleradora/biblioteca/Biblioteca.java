@@ -5,8 +5,10 @@ import java.util.ArrayList;
 public class Biblioteca {
     //Metodo de apresentar mensagem de boas-vindas
 
+    ExibeTextos textos = new ExibeTextos();
+
     public void imprimeMensagem(){
-        System.out.println("Bem vinda(o) à biblioteca, onde você encontra os melhores livros de Porto Alegre");
+        textos.exibeMensagemBoasVindas();
     }
 
     ArrayList<Livros> livros = new ArrayList<Livros>();
@@ -15,9 +17,9 @@ public class Biblioteca {
         livros.add(livro);
     }
 
-    public void exibeLista(){
+    public void imprimeListaDeLivros(){
         for(int i = 0; i < livros.size(); i++){
-            System.out.println("Titulo: " + livros.get(i).titulo + "\nAutoria: " + livros.get(i).autoria);
+            textos.exibeListaDeLivros(livros.get(i));
         }
     }
 }
