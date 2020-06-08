@@ -5,9 +5,14 @@ import java.util.ArrayList;
 public class Biblioteca {
 
     ArrayList<Livros> livros = new ArrayList<Livros>();
+    ExibeTextos textos = new ExibeTextos();
 
     public Biblioteca() {
         this.popularBiblioteca();
+    }
+
+    public void imprimeMensagem(){
+        textos.exibeMensagemBoasVindas();
     }
 
     private void popularBiblioteca() {
@@ -16,21 +21,15 @@ public class Biblioteca {
         this.addLivro(livro1);
         this.addLivro(livro2);
     }
-    public void imprimeMensagemDeBoasVindas() {
-        System.out.println("Bem vinda(o) à biblioteca, onde você encontra os melhores livros de Porto Alegre");
-    }
 
     public void addLivro(Livros livro) {
         livros.add(livro);
     }
 
-    public void exibeListaDeLivros() {
-        for(int i = 0; i < livros.size(); i++) {
-            System.out.println("Titulo: " + livros.get(i).titulo + "\nAutoria: " + livros.get(i).autoria);
+    public void imprimeListaDeLivros(){
+        for(int i = 0; i < livros.size(); i++){
+            textos.exibeListaDeLivros(livros.get(i));
         }
     }
-
-
-
 
 }
