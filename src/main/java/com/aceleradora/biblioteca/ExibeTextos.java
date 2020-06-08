@@ -6,6 +6,6 @@ public class ExibeTextos {
     }
 
     public void exibeListaDeLivros(Livros livro){
-        System.out.println("\nTitulo: " + livro.titulo + "\nAutoria: " + livro.autoria);
+        System.out.println("\nTítulo: " + livro.titulo + "\nAutoria: " + livro.autoria);
     }
 }
