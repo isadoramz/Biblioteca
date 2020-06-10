@@ -5,8 +5,8 @@ public class Main {
     public static void main(String[] args) {
         Biblioteca biblioteca = new Biblioteca();
 
-        biblioteca.imprimeMensagem();
+        Impressora.imprimeMensagem(MensagensDoSistema.retornaMensagemDeBoasVindas());
 
-        biblioteca.imprimeListaDeLivros();
+        Impressora.imprimeMensagem(MensagensDoSistema.retornaListaDeLivros(biblioteca.getLivros()));
     }
 }

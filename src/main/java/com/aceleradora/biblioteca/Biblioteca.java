@@ -5,14 +5,9 @@ import java.util.ArrayList;
 public class Biblioteca {
 
     ArrayList<Livro> livros = new ArrayList<Livro>();
-    MensagensDoSistema textos = new MensagensDoSistema();
 
     public Biblioteca(){
         this.popularBiblioteca();
-    }
-
-    public void imprimeMensagem(){
-        System.out.println(textos.retornaMensagemDeBoasVindas());
     }
 
     private void popularBiblioteca(){
@@ -26,9 +21,10 @@ public class Biblioteca {
         livros.add(livro);
     }
 
-    public void imprimeListaDeLivros(){
-        for(int i = 0; i < livros.size(); i++){
-            System.out.println(textos.retornaListaDeLivros(livros.get(i)));
-        }
+    public ArrayList<Livro> getLivros(){
+       return livros;
+
     }
+
+
 }
