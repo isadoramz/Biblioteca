@@ -21,4 +21,8 @@ public class Livro {
     public void setAutoria(String autoria){
         this.autoria = autoria;
     }
+
+    public String toString(){
+        return "\nTítulo: " + this.titulo + "\nAutoria: " + this.autoria;
+    }
 }
