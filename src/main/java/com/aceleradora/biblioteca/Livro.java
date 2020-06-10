@@ -1,10 +1,10 @@
 package com.aceleradora.biblioteca;
 
-public class Livros {
+public class Livro {
     public String titulo;
     public String autoria;
 
-    public Livros(String titulo, String autoria){
+    public Livro(String titulo, String autoria){
         this.titulo = titulo;
         this.autoria = autoria;
     }

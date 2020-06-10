@@ -4,32 +4,31 @@ import java.util.ArrayList;
 
 public class Biblioteca {
 
-    ArrayList<Livros> livros = new ArrayList<Livros>();
-    ExibeTextos textos = new ExibeTextos();
+    ArrayList<Livro> livros = new ArrayList<Livro>();
+    MensagensDoSistema textos = new MensagensDoSistema();
 
-    public Biblioteca() {
+    public Biblioteca(){
         this.popularBiblioteca();
     }
 
     public void imprimeMensagem(){
-        textos.exibeMensagemBoasVindas();
+        System.out.println(textos.retornaMensagemDeBoasVindas());
     }
 
-    private void popularBiblioteca() {
-        Livros livro1 = new Livros("Program development in Java", "Barbara Liskov");
-        Livros livro2 = new Livros("Use a Cabeça: Padrões de projeto","Elisabeth Freeman, Kathy Sierra");
+    private void popularBiblioteca(){
+        Livro livro1 = new Livro("Program development in Java", "Barbara Liskov");
+        Livro livro2 = new Livro("Use a Cabeça: Padrões de projeto","Elisabeth Freeman, Kathy Sierra");
         this.addLivro(livro1);
         this.addLivro(livro2);
     }
 
-    public void addLivro(Livros livro) {
+    public void addLivro(Livro livro){
         livros.add(livro);
     }
 
     public void imprimeListaDeLivros(){
         for(int i = 0; i < livros.size(); i++){
-            textos.exibeListaDeLivros(livros.get(i));
+            System.out.println(textos.retornaListaDeLivros(livros.get(i)));
         }
     }
-
 }
