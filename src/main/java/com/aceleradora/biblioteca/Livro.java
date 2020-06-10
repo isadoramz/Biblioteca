@@ -1,11 +1,24 @@
 package com.aceleradora.biblioteca;
 
 public class Livro {
-    public String titulo;
-    public String autoria;
+    private String titulo;
+    private String autoria;
 
     public Livro(String titulo, String autoria){
         this.titulo = titulo;
+        this.autoria = autoria;
+    }
+
+    public String getTitulo(){
+        return titulo;
+    }
+    public void setTitulo(String titulo){
+        this.titulo = titulo;
+    }
+    public String getAutoria(){
+        return autoria;
+    }
+    public void setAutoria(String autoria){
         this.autoria = autoria;
     }
 }

@@ -6,6 +6,6 @@ public class MensagensDoSistema {
     }
 
     public String retornaListaDeLivros(Livro livro){
-       return "\nTítulo: " + livro.titulo + "\nAutoria: " + livro.autoria;
+       return "\nTítulo: " + livro.getTitulo() + "\nAutoria: " + livro.getAutoria();
     }
 }
