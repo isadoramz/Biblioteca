@@ -21,7 +21,7 @@ class MensagensDoSistemaTeste {
         ArrayList<Livro> livros = new ArrayList<>();
         Livro livroTeste = new Livro(tituloDoLivro, autoriaDoLivro);
         livros.add(livroTeste);
-        String mensagemEsperada = "\nTítulo: " + tituloDoLivro + "\nAutoria: " + autoriaDoLivro;
+        String mensagemEsperada = "\nTítulo: " + tituloDoLivro + "\nAutoria: " + autoriaDoLivro + "\n";
         String mensagemRecebida = MensagensDoSistema.retornaListaDeLivros(livros);
         assertEquals(mensagemEsperada, mensagemRecebida);
     }
